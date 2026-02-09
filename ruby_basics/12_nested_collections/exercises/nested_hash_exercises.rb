@@ -42,7 +42,9 @@ end
 def find_beautiful_languages(languages)
   # Take languages and return a hash containing only languages which have the
   # key/value pair { is_beautiful?: true } listed in their information
-  languages.find {|hash| hash[:is_beautiful?: true]}
+  languages.select do |key, value| 
+	value[:is_beautiful?] == true
+  end
 end
 
 def find_language_facts(languages, language_name, fact_index = 0)
@@ -62,4 +64,9 @@ def find_language_facts(languages, language_name, fact_index = 0)
   #                 is_beautiful?: false }
   # }
   
+  # The code below work ONLY IF everything exists and is not missing, 
+  # if any part is missing then the code will crash which is why .dig is better
+  # languages[language_name][:facts][fact_index]
+  
+  languages.dig(language_name, :facts, fact_index)
 end
