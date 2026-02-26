@@ -19,11 +19,12 @@ def caesar_cipher(string, int)
       # Converts the number back to character
       result = (result + 65).chr
 
-    # Checks for downcase letters
-    elsif char.ord >= 97 && char.ord <= 122
-      result = char.ord - 97
-      result = (result + int) % 26
-      result = (result + 65).chr
+      # Checks for downcase letters
+      elsif char.ord >= 97 && char.ord <= 122
+        result = char.ord - 97
+        result = (result + int) % 26
+        result = (result + 97).chr
+ 
     else    
       result = char
     end
