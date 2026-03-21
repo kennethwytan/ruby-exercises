@@ -1,0 +1,8 @@
+# Method that takes a word as first argument and then an array
+# of valid substring as second argument. It should return a hash
+# listing of each substring that was found in the original string
+# and how many times it was found
+
+
+def substrings(string, dictionary):
+
