@@ -45,8 +45,11 @@ end
 
 puts "Enter the stock pricing"
 
-stock_price = gets.chomp
-stock_array = stock_price.split.map(&:to_i)
+# If want to manually enter price of stock per day
+# stock_price = gets.chomp
+# stock_array = stock_price.split.map(&:to_i)
+# stock_picker(stock_array)
 
-stock_picker(stock_array)
 
+# Straight enter an array into the function
+stock_picker([17,3,6,9,15,8,1,10])
